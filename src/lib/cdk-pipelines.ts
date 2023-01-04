@@ -75,7 +75,7 @@ export class CdkPipelinesStack extends cdk.Stack {
       synth: new ShellStep('Synth', {
         input: this.getCodepipelineSource(pipelinesProps),
         commands: [
-          'npm i',
+          'npm ci',
           'npm run build',
           'npx cdk synth',
         ],
