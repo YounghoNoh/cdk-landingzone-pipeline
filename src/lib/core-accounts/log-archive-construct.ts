@@ -212,7 +212,8 @@ export class LogArchiveConstruct extends cdk.Construct {
     }));
 
     const fn = new lambda.Function(this, `${tablename}PartitioningLambdaFunction`, {
-      runtime: lambda.Runtime.PYTHON_3_6,
+      // runtime: lambda.Runtime.PYTHON_3_6,
+      runtime: lambda.Runtime.PYTHON_3_9,
       functionName: `${tablename}PatitioningLambdaFunction`,
       timeout: cdk.Duration.seconds(180),
       handler: 'partition.handler',
