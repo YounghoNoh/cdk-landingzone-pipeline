@@ -36,7 +36,7 @@ export const envVars = {
   SUPPORT_ACCOUNT_ID: '484752921218',
   SERVICE_ACCOUNTS: [
     // { Name: 'master', Id: '037729278610', Email: 'jingood0728@naver.com' },
-    { Name: 'master', Id: '484752921218', Email: 'jingood0728@naver.com' },
+    { Name: 'master', Id: '484752921218', Email: 'awstf_rnd@skcc.com' },
     // { Name: 'logging', Id: '318126949465', Email: 'jingood2+logging@gmail.com' },
     // { Name: 'sub2', Id: '856556794427', Email: 'jingood2+sub2@gmail.com' },
   ],
