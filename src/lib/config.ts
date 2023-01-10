@@ -8,9 +8,9 @@ export const envVars = {
   SOURCE_PROVIDER: 'GITHUB',
   // REPO: process.env.REPO_NAME || 'jingood2/cdk-landingzone-pipeline',
   REPO: process.env.REPO_NAME || 'YounghoNoh/cdk-landingzone-pipeline',
-  BRANCH: 'main',
+  BRANCH: 'awstf-rnd',
   // GITHUB_TOKEN: 'atcl/jingood2/github-token',
-  GITHUB_TOKEN: 'atcl/jingood2/github-token',
+  GITHUB_TOKEN: 'cdk-landingzone-pipeline/github-token',
   MASTER: {
     // ACCOUNT_ID: '037729278610',
     ACCOUNT_ID: '484752921218',
