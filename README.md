@@ -1,7 +1,9 @@
 # replace this
 
 # package-lock.json Install dependencies 
+``` shell
 npm ci
+```
 
 # CDK Pipeline
 https://aws.amazon.com/ko/blogs/developer/cdk-pipelines-continuous-delivery-for-aws-cdk-applications/
@@ -12,10 +14,14 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/c
 # git token AWS Secrets Manager 등록
 
 # config 수정
-src/lib/config.ts
+path : src/lib/config.ts
 
-# deploy
+# cdk deploy
+``` shell
 npx cdk deploy --profile <profile-name>
+```
 
-# destory
+# cdk destory
+``` shell
 npx cdk destroy --profile <profile-name>
+```
