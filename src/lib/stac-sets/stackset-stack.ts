@@ -1,6 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 import { StacksetAssumableRole } from './01-assumable-role';
-import { StacksetPasswordPolicy } from './02-password-policy';
+// import { StacksetPasswordPolicy } from './02-password-policy';
 import { StacksetConfig } from './03-config';
 import { StacksetCloudtrail } from './04-cloudtrail';
 import { StacksetGuarddutyMemberRole } from './05-guardduty-member';
