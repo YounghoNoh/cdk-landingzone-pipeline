@@ -16,7 +16,7 @@ export class StacksetStack extends cdk.Stack {
 
     new StacksetAssumableRole(this, 'assumable-role');
 
-    new StacksetPasswordPolicy(this, 'password-policy');
+    // new StacksetPasswordPolicy(this, 'password-policy');
 
     new StacksetConfig(this, 'stackset-config');
 
