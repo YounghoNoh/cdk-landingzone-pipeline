@@ -34,7 +34,8 @@ export class StacksetGuarddutyMemberRole extends cdk.Construct {
       ],
       //templateBody: convertYamlString(path.join(__dirname, '../..', 'cfn-template/stack-set/01.assumable-role/assume-role.yaml')),
       // templateUrl: 'https://jingood2-stackset-template.s3.ap-northeast-2.amazonaws.com/guardduty-member.template.yaml',
-      templateUrl: 'https://cdklz-stackset-template.s3.ap-northeast-2.amazonaws.com/guardduty-member.template.yaml',
+      // templateUrl: 'https://cdklz-stackset-template.s3.ap-northeast-2.amazonaws.com/guardduty-member.template.yaml',
+      templateUrl: `https://cdklz-stackset-template-${envVars.MASTER.ACCOUNT_ID}.s3.ap-northeast-2.amazonaws.com/guardduty-member.template.yaml`,
     });
 
   }

@@ -88,14 +88,14 @@ export class CdkPipelinesStack extends cdk.Stack {
     pipeline.addStage(new MasterAccountStage(this, 'LZ-CORE-MASTER', {
       env: {
         account: envVars.MASTER.ACCOUNT_ID,
-        region: 'ap-northeast-2',
+        region: envVars.REGION,
       },
     }));
 
     pipeline.addStage(new LoggingAccountStage(this, 'LZ-CORE-LOGARCHIVE', {
       env: {
         account: envVars.LOG_ARCHIVE.ACCOUNT_ID,
-        region: 'ap-northeast-2',
+        region: envVars.REGION,
       },
     }));
 
@@ -116,7 +116,7 @@ export class CdkPipelinesStack extends cdk.Stack {
     pipeline.addStage(new StacksetStage(this, 'LZ-SERVICE-ACCOUNTS', {
       env: {
         account: envVars.MASTER.ACCOUNT_ID,
-        region: 'ap-northeast-2',
+        region: envVars.REGION,
       },
     }));
 
