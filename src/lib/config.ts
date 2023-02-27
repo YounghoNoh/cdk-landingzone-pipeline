@@ -32,7 +32,7 @@ export const envVars = {
   },
   SERVICE: {
     // LIST_OF_ACCOUNTS: ['037729278610'],
-    LIST_OF_ACCOUNTS: ['424265176155'],
+    LIST_OF_ACCOUNTS: ['424265176155', '907555560021'],
   },
   // SUPPORT_ACCOUNT_ID: '037729278610',
   SUPPORT_ACCOUNT_ID: '293431643333',
@@ -43,6 +43,7 @@ export const envVars = {
     { Name: 'master', Id: '293431643333', Email: 'awstfasset+cdklz@gmail.com' },
     { Name: 'logging', Id: '303182103652', Email: 'awstfasset+cdklz+log@gmail.com' },
     { Name: 'service1', Id: '424265176155', Email: 'awstfasset+cdklz+svc@gmail.com' },
+    { Name: 'service2', Id: '907555560021', Email: 'awstfasset+cdklz+svc2@gmail.com' },
   ],
   ALLOWED_REGIONS: ['ap-northeast-2'],
   // REQUESTED_REGIONS: 'ap-northeast-2,us-east-1',
