@@ -5,14 +5,16 @@ export const envVars = {
   REGION: process.env.REGION || 'ap-northeast-2',
   COMPANY_NAME: 'acme',
   PROJECT_NAME: 'landingZone',
-  // SOURCE_PROVIDER: 'GITHUB',
+  /*  GITHUB
+      CODECOMMIT
+  */
   SOURCE_PROVIDER: 'CODECOMMIT',
   // REPO: process.env.REPO_NAME || 'jingood2/cdk-landingzone-pipeline',
   // REPO: process.env.REPO_NAME || 'YounghoNoh/cdk-landingzone-pipeline',
   REPO: process.env.REPO_NAME || 'cdk-landingzone-pipeline',
   BRANCH: 'awstf-rnd',
   // GITHUB_TOKEN: 'atcl/jingood2/github-token',
-  GITHUB_TOKEN: 'cdk-landingzone-pipeline/github-token',
+  GITHUB_TOKEN: '',
   MASTER: {
     // ACCOUNT_ID: '037729278610',
     ACCOUNT_ID: '293431643333',
@@ -30,10 +32,6 @@ export const envVars = {
     */
     DELIVERY_FREQUENCY: 'Twelve_Hours',
   },
-  // SERVICE: {
-  //   // LIST_OF_ACCOUNTS: ['037729278610'],
-  //   LIST_OF_ACCOUNTS: ['424265176155', '907555560021'],
-  // },
   // SUPPORT_ACCOUNT_ID: '037729278610',
   SUPPORT_ACCOUNT_ID: '293431643333',
   SERVICE_ACCOUNTS: [
