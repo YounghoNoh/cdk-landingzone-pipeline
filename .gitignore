@@ -12,6 +12,7 @@
 .nyc_output
 .parcel-cache/
 .yarn-integrity
+.vscode/
 /.changelog.tmp.md
 /.version.tmp.json
 /coverage

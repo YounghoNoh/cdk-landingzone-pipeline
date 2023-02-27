@@ -55,6 +55,9 @@ export const envVars = {
 
 export function validateEnvVariables() {
   for (let variable in envVars) {
+
+    var temp = envVars[variable as keyof typeof envVars];
+
     if (!envVars[variable as keyof typeof envVars]) {
       throw Error(
         chalk.red(`[app]: Environment variable ${variable} is not defined!`),
