@@ -14,7 +14,7 @@ export const envVars = {
   REPO: process.env.REPO_NAME || 'cdk-landingzone-pipeline',
   BRANCH: 'awstf-rnd',
   // GITHUB_TOKEN: 'atcl/jingood2/github-token',
-  GITHUB_TOKEN: '',
+  GITHUB_TOKEN: 'skip',
   MASTER: {
     // ACCOUNT_ID: '037729278610',
     ACCOUNT_ID: '293431643333',
@@ -55,9 +55,6 @@ export const envVars = {
 
 export function validateEnvVariables() {
   for (let variable in envVars) {
-
-    var temp = envVars[variable as keyof typeof envVars];
-
     if (!envVars[variable as keyof typeof envVars]) {
       throw Error(
         chalk.red(`[app]: Environment variable ${variable} is not defined!`),
