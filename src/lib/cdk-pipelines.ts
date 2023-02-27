@@ -24,56 +24,13 @@ export class CdkPipelinesStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props: CdkPipelinesProps) {
     super(scope, id, props);
 
-    let gitProvider = new cdk.CfnParameter(this, 'git-provider', {
-      type: 'String',
-      description: 'name of git provider',
-      default: 'GITHUB',
-      allowedValues: ['GITHUB', 'CODECOMMIT'],
-    }).valueAsString;
-
-    gitProvider = envVars.SOURCE_PROVIDER;
-
-    // 👇 parameter of type String
-    let repoName = new cdk.CfnParameter(this, 'repository', {
-      type: 'String',
-      description: 'repository name of cdk infra',
-      default: 'jingood2/custom-resource-ddb-example',
-    }).valueAsString;
-
-    repoName = envVars.REPO;
-
-    let branchName = new cdk.CfnParameter(this, 'branch', {
-      type: 'String',
-      description: 'branch name of git repository',
-      default: 'main',
-    }).valueAsString;
-
-    branchName = envVars.BRANCH;
-
-    new cdk.CfnCondition(this, 'UseGithub', {
-      expression: cdk.Fn.conditionEquals(gitProvider, 'github'),
-    });
-
-    let githubToken = new cdk.CfnParameter(this, 'githubToken', {
-      type: 'String',
-      description: 'secret key for github personal access token',
-      default: '',
-    }).valueAsString;
-    githubToken = envVars.GITHUB_TOKEN;
-
-    const pipelinesProps: CodepipelineSourceProps = {
-      gitType: gitProvider,
-      repoString: repoName,
-      branch: branchName,
-      githubToken: githubToken,
-    };
 
     const pipeline = new CodePipeline(this, 'Pipeline', {
       selfMutation: true,
       pipelineName: `${envVars.COMPANY_NAME}-${envVars.PROJECT_NAME}-pipeline`,
       crossAccountKeys: true,
       synth: new ShellStep('Synth', {
-        input: this.getCodepipelineSource(pipelinesProps),
+        input: this.getCodepipelineSource(),
         commands: [
           'npm ci',
           'npm run build',
@@ -122,17 +79,62 @@ export class CdkPipelinesStack extends cdk.Stack {
 
   }
 
-  private getCodepipelineSource( sourceProps: CodepipelineSourceProps) : CodePipelineSource | undefined {
+  // private getCodepipelineSource( sourceProps: CodepipelineSourceProps) : CodePipelineSource | undefined {
+  private getCodepipelineSource() : CodePipelineSource | undefined {
 
-    switch (sourceProps.gitType) {
+    let gitProvider = new cdk.CfnParameter(this, 'git-provider', {
+      type: 'String',
+      description: 'name of git provider',
+      default: 'GITHUB',
+      allowedValues: ['GITHUB', 'CODECOMMIT'],
+    }).valueAsString;
+
+    gitProvider = envVars.SOURCE_PROVIDER;
+
+    // 👇 parameter of type String
+    let repoName = new cdk.CfnParameter(this, 'repository', {
+      type: 'String',
+      description: 'repository name of cdk infra',
+      default: 'jingood2/custom-resource-ddb-example',
+    }).valueAsString;
+
+    repoName = envVars.REPO;
+
+    let branchName = new cdk.CfnParameter(this, 'branch', {
+      type: 'String',
+      description: 'branch name of git repository',
+      default: 'main',
+    }).valueAsString;
+
+    branchName = envVars.BRANCH;
+
+    new cdk.CfnCondition(this, 'UseGithub', {
+      expression: cdk.Fn.conditionEquals(gitProvider, 'github'),
+    });
+
+    const pipelinesProps: CodepipelineSourceProps = {
+      gitType: gitProvider,
+      repoString: repoName,
+      branch: branchName,
+      githubToken: '',
+    };
+
+    switch (pipelinesProps.gitType) {
 
       case 'GITHUB':
-        return CodePipelineSource.gitHub(sourceProps.repoString, sourceProps.branch, {
-          authentication: SecretValue.secretsManager(sourceProps.githubToken ?? ''),
+        // let githubToken = new cdk.CfnParameter(this, 'githubToken', {
+        //   type: 'String',
+        //   description: 'secret key for github personal access token',
+        //   default: '',
+        // }).valueAsString;
+        pipelinesProps.githubToken = envVars.GITHUB_TOKEN;
+
+        return CodePipelineSource.gitHub(pipelinesProps.repoString, pipelinesProps.branch, {
+          authentication: SecretValue.secretsManager(pipelinesProps.githubToken ?? ''),
         });
       case 'CODECOMMIT':
         return CodePipelineSource.codeCommit(
-          codecommit.Repository.fromRepositoryName(this, 'Repository', sourceProps.repoString), sourceProps.branch);
+          codecommit.Repository.fromRepositoryName(this, 'Repository', pipelinesProps.repoString), pipelinesProps.branch);
 
       default :
         return undefined;
