@@ -1,12 +1,13 @@
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface PasswordPolicyProps {
 
 }
 
-export class StacksetPasswordPolicy extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string ) {
+export class StacksetPasswordPolicy extends Construct {
+  constructor(scope: Construct, id: string ) {
     super(scope, id);
 
     new cdk.CfnStackSet(this, 'password-policy', {

@@ -1,8 +1,9 @@
 import * as path from 'path';
-import * as glue from '@aws-cdk/aws-glue';
-import * as s3 from '@aws-cdk/aws-s3';
-import * as cfn_inc from '@aws-cdk/cloudformation-include';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import * as glue from 'aws-cdk-lib/aws-glue';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as cfn_inc from 'aws-cdk-lib/cloudformation-include';
+import { Construct } from 'constructs';
 
 
 export interface MyTemplateStackProps extends cdk.StackProps {
@@ -10,7 +11,7 @@ export interface MyTemplateStackProps extends cdk.StackProps {
 }
 
 export class MyTemplateStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props: MyTemplateStackProps) {
+  constructor(scope: Construct, id: string, props: MyTemplateStackProps) {
     super(scope, id, props);
 
     //const BUCKET_PREFIX = 'audit';

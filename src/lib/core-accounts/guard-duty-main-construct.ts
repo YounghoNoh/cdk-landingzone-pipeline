@@ -1,5 +1,5 @@
-import { Construct } from "constructs";
 import * as guardduty from 'aws-cdk-lib/aws-guardduty';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface GuarddutyMainProps {

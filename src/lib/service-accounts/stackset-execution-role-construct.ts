@@ -1,7 +1,7 @@
-import { Construct } from "constructs";
 import * as path from 'path';
 import * as cfn_inc from 'aws-cdk-lib/cloudformation-include';
 import * as cdk from 'aws-cdk-lib/core';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface StacksetExecutionRoleConstructProps {

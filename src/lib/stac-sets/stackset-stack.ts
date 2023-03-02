@@ -1,5 +1,5 @@
-import { Construct } from "constructs";
 import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { StacksetAssumableRole } from './01-assumable-role';
 // import { StacksetPasswordPolicy } from './02-password-policy';
 import { StacksetConfig } from './03-config';

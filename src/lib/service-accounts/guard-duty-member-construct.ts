@@ -1,13 +1,13 @@
-import * as guardduty from '@aws-cdk/aws-guardduty';
-import * as cdk from '@aws-cdk/core';
+import * as guardduty from 'aws-cdk-lib/aws-guardduty';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface GuardDutyMemberProps {
 
 }
 
-export class GuardDutyMember extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string ) {
+export class GuardDutyMember extends Construct {
+  constructor(scope: Construct, id: string ) {
     super(scope, id);
 
     const cfnDetector = new guardduty.CfnDetector(this, 'GuardDutyDetector', {

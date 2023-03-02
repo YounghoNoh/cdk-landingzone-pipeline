@@ -1,5 +1,5 @@
-import { Construct } from "constructs";
 import * as iam from 'aws-cdk-lib/aws-iam';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface AssumeRoleConstructProps {

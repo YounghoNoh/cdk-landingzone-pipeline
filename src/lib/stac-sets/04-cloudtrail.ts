@@ -1,6 +1,6 @@
 //import * as path from 'path';
-import { Construct } from "constructs";
 import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface StacksetCloudtrailProps {

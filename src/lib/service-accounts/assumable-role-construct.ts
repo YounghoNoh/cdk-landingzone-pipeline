@@ -1,5 +1,6 @@
-import * as iam from '@aws-cdk/aws-iam';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 import { PermissionBoundaryConstruct } from './permission-boundary-construct';
 
@@ -7,8 +8,8 @@ export interface AssumableRoleConstructProps {
 
 }
 
-export class AssumableRoleConstruct extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string ) {
+export class AssumableRoleConstruct extends Construct {
+  constructor(scope: Construct, id: string ) {
     super(scope, id);
 
     /* const ROLES = [

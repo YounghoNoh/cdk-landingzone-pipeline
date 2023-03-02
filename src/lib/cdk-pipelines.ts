@@ -1,8 +1,8 @@
-import { Construct } from "constructs";
 import * as cdk from 'aws-cdk-lib';
-import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import { SecretValue } from 'aws-cdk-lib';
+import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
+import { Construct } from 'constructs';
 import { envVars } from './config';
 import { LoggingAccountStage } from './logging-account-stage';
 import { MasterAccountStage } from './master-account-stage';

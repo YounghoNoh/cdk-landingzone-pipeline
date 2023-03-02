@@ -1,17 +1,18 @@
-import * as iam from '@aws-cdk/aws-iam';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface PermissionBoundaryConstructProps {
 
 }
 
-export class PermissionBoundaryConstruct extends cdk.Construct {
+export class PermissionBoundaryConstruct extends Construct {
   public readonly createdIdentitiesPermissionsBoundary: iam.ManagedPolicy;
   public readonly adminPermissionsBoundary: iam.ManagedPolicy;
   public readonly developerPermissionsBoundary: iam.ManagedPolicy;
 
-  constructor(scope: cdk.Construct, id: string) {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     /* let iamPermissionBoundaryLimit = new cdk.CfnParameter(this, 'IAMPermissionBoundaryLimitation', {

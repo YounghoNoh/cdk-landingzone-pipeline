@@ -1,4 +1,5 @@
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { ServiceAccountStack } from './service-accounts/service-account-stack';
 
 export interface ServiceAccountStageProps extends cdk.StageProps{
@@ -6,7 +7,7 @@ export interface ServiceAccountStageProps extends cdk.StageProps{
 }
 
 export class ServiceAccountStage extends cdk.Stage {
-  constructor(scope: cdk.Construct, id: string, props: ServiceAccountStageProps) {
+  constructor(scope: Construct, id: string, props: ServiceAccountStageProps) {
     super(scope, id, props);
 
     /**

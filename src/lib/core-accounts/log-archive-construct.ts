@@ -1,5 +1,5 @@
-import { Construct } from "constructs";
 import * as path from 'path';
+import * as cdk from 'aws-cdk-lib';
 import * as config from 'aws-cdk-lib/aws-config';
 import * as glue from 'aws-cdk-lib/aws-glue';
 import * as iam from 'aws-cdk-lib/aws-iam';
@@ -8,7 +8,7 @@ import * as logs from 'aws-cdk-lib/aws-logs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as s3n from 'aws-cdk-lib/aws-s3-notifications';
 import * as cfn_inc from 'aws-cdk-lib/cloudformation-include';
-import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 import { envVars } from '../config';
 
 export interface LogArchiveConstructProps extends cdk.StackProps{
