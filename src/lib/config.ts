@@ -10,7 +10,7 @@ export const envVars = {
   */
   SOURCE_PROVIDER: 'CODECOMMIT',
   REPO: process.env.REPO_NAME || 'cdk-landingzone-pipeline',
-  BRANCH: 'awstf-rnd',
+  BRANCH: 'awstf-rnd-v2',
   // GITHUB 사용시 입력 AWS Secrets Manager에 등록된 git token key값 입력
   GITHUB_TOKEN: 'skip',
   MASTER: {
