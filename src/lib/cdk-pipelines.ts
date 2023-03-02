@@ -1,7 +1,8 @@
-import * as codecommit from '@aws-cdk/aws-codecommit';
-import * as cdk from '@aws-cdk/core';
-import { SecretValue } from '@aws-cdk/core';
-import { CodePipeline, CodePipelineSource, ShellStep } from '@aws-cdk/pipelines';
+import { Construct } from "constructs";
+import * as cdk from 'aws-cdk-lib';
+import * as codecommit from 'aws-cdk-lib/aws-codecommit';
+import { SecretValue } from 'aws-cdk-lib';
+import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
 import { envVars } from './config';
 import { LoggingAccountStage } from './logging-account-stage';
 import { MasterAccountStage } from './master-account-stage';
@@ -21,7 +22,7 @@ export interface CdkPipelinesProps extends cdk.StackProps {
 
 export class CdkPipelinesStack extends cdk.Stack {
 
-  constructor(scope: cdk.Construct, id: string, props: CdkPipelinesProps) {
+  constructor(scope: Construct, id: string, props: CdkPipelinesProps) {
     super(scope, id, props);
 
 

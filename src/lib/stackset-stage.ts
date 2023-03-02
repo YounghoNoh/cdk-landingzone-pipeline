@@ -1,4 +1,5 @@
-import * as cdk from '@aws-cdk/core';
+import { Construct } from "constructs";
+import * as cdk from 'aws-cdk-lib';
 import { StacksetStack } from './stac-sets/stackset-stack';
 
 export interface StacksetStageProps extends cdk.StageProps{
@@ -6,7 +7,7 @@ export interface StacksetStageProps extends cdk.StageProps{
 }
 
 export class StacksetStage extends cdk.Stage {
-  constructor(scope: cdk.Construct, id: string, props: StacksetStageProps) {
+  constructor(scope: Construct, id: string, props: StacksetStageProps) {
     super(scope, id, props);
 
     /**

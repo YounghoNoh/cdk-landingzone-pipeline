@@ -23,11 +23,7 @@
     },
     {
       "name": "aws-cdk",
-      "version": "^1.133.0",
-      "type": "build"
-    },
-    {
-      "name": "cdk-assume-role-credential-plugin",
+      "version": "^2.66.1",
       "type": "build"
     },
     {
@@ -93,101 +89,21 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.133.0",
+      "version": "^2.66.1",
       "type": "runtime"
     },
     {
-      "name": "@aws-cdk/aws-athena",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-codebuild",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-codecommit",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-codedeploy",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-codepipeline-actions",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-codepipeline",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-config",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-glue",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-guardduty",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-iam",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-lambda",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-logs",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-s3-notifications",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/aws-s3",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/cloudformation-include",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/core",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/core",
-      "version": "^1.133.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-cdk/pipelines",
-      "version": "^1.133.0",
+      "name": "aws-cdk-lib",
+      "version": "^2.66.1",
       "type": "runtime"
     },
     {
       "name": "chalk",
+      "type": "runtime"
+    },
+    {
+      "name": "constructs",
+      "version": "^10.0.5",
       "type": "runtime"
     },
     {

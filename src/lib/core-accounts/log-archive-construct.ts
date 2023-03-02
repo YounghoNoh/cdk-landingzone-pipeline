@@ -1,13 +1,14 @@
+import { Construct } from "constructs";
 import * as path from 'path';
-import * as config from '@aws-cdk/aws-config';
-import * as glue from '@aws-cdk/aws-glue';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as logs from '@aws-cdk/aws-logs';
-import * as s3 from '@aws-cdk/aws-s3';
-import * as s3n from '@aws-cdk/aws-s3-notifications';
-import * as cfn_inc from '@aws-cdk/cloudformation-include';
-import * as cdk from '@aws-cdk/core';
+import * as config from 'aws-cdk-lib/aws-config';
+import * as glue from 'aws-cdk-lib/aws-glue';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as logs from 'aws-cdk-lib/aws-logs';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as s3n from 'aws-cdk-lib/aws-s3-notifications';
+import * as cfn_inc from 'aws-cdk-lib/cloudformation-include';
+import * as cdk from 'aws-cdk-lib';
 import { envVars } from '../config';
 
 export interface LogArchiveConstructProps extends cdk.StackProps{
@@ -21,8 +22,8 @@ export interface GluePartitionInfo {
   auditingGlueDatabaseName: string;
 }
 
-export class LogArchiveConstruct extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string ) {
+export class LogArchiveConstruct extends Construct {
+  constructor(scope: Construct, id: string ) {
     super(scope, id);
 
     const logingBucket = new s3.Bucket(this, 'logging-bucket', {

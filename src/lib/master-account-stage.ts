@@ -1,4 +1,5 @@
-import * as cdk from '@aws-cdk/core';
+import { Construct } from "constructs";
+import * as cdk from 'aws-cdk-lib';
 import { envVars } from './config';
 //import { devEnv } from '../main';
 //import { LoggingAccountStack } from './core-accounts/logging-account-stack';
@@ -11,7 +12,7 @@ export interface MasterAccountStageProps extends cdk.StageProps{
 }
 
 export class MasterAccountStage extends cdk.Stage {
-  constructor(scope: cdk.Construct, id: string, props: MasterAccountStageProps) {
+  constructor(scope: Construct, id: string, props: MasterAccountStageProps) {
     super(scope, id, props);
 
     /**

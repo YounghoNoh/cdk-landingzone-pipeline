@@ -1,14 +1,15 @@
+import { Construct } from "constructs";
 import * as path from 'path';
-import * as cfn_inc from '@aws-cdk/cloudformation-include';
-import * as cdk from '@aws-cdk/core';
+import * as cfn_inc from 'aws-cdk-lib/cloudformation-include';
+import * as cdk from 'aws-cdk-lib/core';
 import { envVars } from '../config';
 
 export interface StacksetExecutionRoleConstructProps {
   stacksetRole: string;
 }
 
-export class StacksetExecutionRoleConstruct extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: StacksetExecutionRoleConstructProps) {
+export class StacksetExecutionRoleConstruct extends Construct {
+  constructor(scope: Construct, id: string, props: StacksetExecutionRoleConstructProps) {
     super(scope, id);
 
     if ( props.stacksetRole == 'admin' ) {

@@ -1,4 +1,5 @@
-import * as cdk from '@aws-cdk/core';
+import { Construct } from "constructs";
+import * as cdk from 'aws-cdk-lib';
 import { StacksetAssumableRole } from './01-assumable-role';
 // import { StacksetPasswordPolicy } from './02-password-policy';
 import { StacksetConfig } from './03-config';
@@ -11,7 +12,7 @@ export interface StacksetStackProps extends cdk.StackProps {
 }
 
 export class StacksetStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props: StacksetStackProps) {
+  constructor(scope: Construct, id: string, props: StacksetStackProps) {
     super(scope, id, props);
 
     new StacksetAssumableRole(this, 'assumable-role');

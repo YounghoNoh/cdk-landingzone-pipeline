@@ -1,4 +1,5 @@
-import * as cdk from '@aws-cdk/core';
+import { Construct } from "constructs";
+import * as cdk from 'aws-cdk-lib';
 import { StacksetExecutionRoleConstruct } from '../service-accounts/stackset-execution-role-construct';
 import { AssumeRoleConstruct } from './assume-role-construct';
 import { GuardDutyMainConstruct } from './guard-duty-main-construct';
@@ -11,7 +12,7 @@ export interface MasterAccountStackProps extends cdk.StackProps {
 }
 
 export class MasterAccountStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props: MasterAccountStackProps) {
+  constructor(scope: Construct, id: string, props: MasterAccountStackProps) {
     super(scope, id, props);
 
     //new LogArchiveConstruct(this, 'log-archive');

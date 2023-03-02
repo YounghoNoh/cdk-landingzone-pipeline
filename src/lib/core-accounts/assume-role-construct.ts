@@ -1,13 +1,13 @@
-import * as iam from '@aws-cdk/aws-iam';
-import * as cdk from '@aws-cdk/core';
+import { Construct } from "constructs";
+import * as iam from 'aws-cdk-lib/aws-iam';
 import { envVars } from '../config';
 
 export interface AssumeRoleConstructProps {
 
 }
 
-export class AssumeRoleConstruct extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string ) {
+export class AssumeRoleConstruct extends Construct {
+  constructor(scope: Construct, id: string ) {
     super(scope, id);
 
     const ROLES = [

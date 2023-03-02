@@ -1,4 +1,5 @@
-import { App, Construct, Stack, StackProps } from '@aws-cdk/core';
+import { Construct } from "constructs";
+import { App, Stack, StackProps } from 'aws-cdk-lib';
 import { CdkPipelinesStack } from './lib/cdk-pipelines';
 import { envVars, validateEnvVariables } from './lib/config';
 
