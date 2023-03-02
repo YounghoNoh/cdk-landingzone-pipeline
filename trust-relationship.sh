@@ -18,6 +18,7 @@ aws://293431643333/ap-northeast-2
 npx cdk bootstrap \
 --profile aws-tf-cdklz-log \
 --trust 293431643333 \
+--trust-for-lookup 293431643333 \
 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
 aws://303182103652/ap-northeast-2
 
@@ -42,3 +43,6 @@ aws codecommit create-repository \
     --profile aws-tf-cdklz \
     --repository-name cdk-landingzone-pipeline2 \
     --region ap-northeast-2
+
+
+AWS_SDK_LOAD_CONFIG=1 AWS_PROFILE=aws-tf-cdklz npx awscdk-v1-stack-finder
