@@ -7,7 +7,6 @@ const project = new AwsCdkTypeScriptApp({
   cdkDependencies: [
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
   context: {
-    '@aws-cdk/core:newStyleStackSynthesis': true,
   },
   deps: [
     'yamljs',
