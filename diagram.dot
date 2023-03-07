@@ -1,0 +1,1702 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "acme-landingZone-Pipeline" {
+    subgraph "cluster-SubGraph.acme-landingZone-Pipeline" {
+      graph [
+        label = "acme-landingZone-Pipeline",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      "acme-landingZone-Pipeline/Repository/acmelandingZonePipeline94868EA7-awstf-rnd-v2-EventRule" [
+        label = "\nacmelandingZonePipeli\nawstf rnd v2\nEventRule",
+        fontsize = 12,
+        image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_Amazon-EventBridge_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 2.114,
+      ];
+      subgraph "cluster-SubGraph.Pipeline" {
+        graph [
+          label = "Pipeline",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "acme-landingZone-Pipeline/Pipeline/Pipeline" [
+          label = " Pipeline",
+          fontsize = 12,
+          image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_AWS-CodePipeline_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "acme-landingZone-Pipeline/Pipeline/CodeBuildActionRole" [
+          label = " CodeBuildActionRole",
+          fontsize = 12,
+          image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "acme-landingZone-Pipeline/Pipeline/UpdatePipeline/SelfMutation" [
+          label = " SelfMutation",
+          fontsize = 12,
+          image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        subgraph "cluster-SubGraph.Assets" {
+          graph [
+            label = "Assets",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "acme-landingZone-Pipeline/Pipeline/Assets/FileRole" [
+            label = " FileRole",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset1" [
+            label = " FileAsset1",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset2" [
+            label = " FileAsset2",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+        }
+      }
+      subgraph "cluster-SubGraph.LZ-CORE-MASTER" {
+        graph [
+          label = "LZ-CORE-MASTER",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        subgraph "cluster-SubGraph.293431643333-Stack" {
+          graph [
+            label = "293431643333-Stack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          subgraph "cluster-SubGraph.iam-group" {
+            graph [
+              label = "iam-group",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/AdminGroup" [
+              label = " AdminGroup",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/AdminPolicy" [
+              label = " AdminPolicy",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserMangementGroup" [
+              label = " UserMangementGroup",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserMangementPolicy" [
+              label = " UserMangementPolicy",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserCredentialsManagement" [
+              label = "\nUserCredentialsManage",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserCredentialsManagementPolicy" [
+              label = "\nUserCredentialsManage",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+          }
+          subgraph "cluster-SubGraph.assume-role" {
+            graph [
+              label = "assume-role",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup293431643333" [
+              label = "\nAdminGroup29343164333",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy293431643333" [
+              label = "\nAdminPolicy2934316433",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup293431643333" [
+              label = "\nDeveloperGroup2934316",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy293431643333" [
+              label = "\nDeveloperPolicy293431",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup293431643333" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy293431643333" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup293431643333" [
+              label = "\nReadOnlyGroup29343164",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy293431643333" [
+              label = "\nReadOnlyPolicy2934316",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup293431643333" [
+              label = "\nSecurityAuditGroup293",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy293431643333" [
+              label = "\nSecurityAuditPolicy29",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup293431643333" [
+              label = "\nOperationsGroup293431",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy293431643333" [
+              label = "\nOperationsPolicy29343",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup293431643333" [
+              label = "\nAwsPowerUserGroup2934",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy293431643333" [
+              label = "\nAwsPowerUserPolicy293",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup293431643333" [
+              label = "\nAwsSupportUserGroup29",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy293431643333" [
+              label = "\nAwsSupportUserPolicy2",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup303182103652" [
+              label = "\nAdminGroup30318210365",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy303182103652" [
+              label = "\nAdminPolicy3031821036",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup303182103652" [
+              label = "\nDeveloperGroup3031821",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy303182103652" [
+              label = "\nDeveloperPolicy303182",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup303182103652" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy303182103652" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup303182103652" [
+              label = "\nReadOnlyGroup30318210",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy303182103652" [
+              label = "\nReadOnlyPolicy3031821",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup303182103652" [
+              label = "\nSecurityAuditGroup303",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy303182103652" [
+              label = "\nSecurityAuditPolicy30",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup303182103652" [
+              label = "\nOperationsGroup303182",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy303182103652" [
+              label = "\nOperationsPolicy30318",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup303182103652" [
+              label = "\nAwsPowerUserGroup3031",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy303182103652" [
+              label = "\nAwsPowerUserPolicy303",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup303182103652" [
+              label = "\nAwsSupportUserGroup30",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy303182103652" [
+              label = "\nAwsSupportUserPolicy3",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup424265176155" [
+              label = "\nAdminGroup42426517615",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy424265176155" [
+              label = "\nAdminPolicy4242651761",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup424265176155" [
+              label = "\nDeveloperGroup4242651",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy424265176155" [
+              label = "\nDeveloperPolicy424265",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup424265176155" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy424265176155" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup424265176155" [
+              label = "\nReadOnlyGroup42426517",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy424265176155" [
+              label = "\nReadOnlyPolicy4242651",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup424265176155" [
+              label = "\nSecurityAuditGroup424",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy424265176155" [
+              label = "\nSecurityAuditPolicy42",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup424265176155" [
+              label = "\nOperationsGroup424265",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy424265176155" [
+              label = "\nOperationsPolicy42426",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup424265176155" [
+              label = "\nAwsPowerUserGroup4242",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy424265176155" [
+              label = "\nAwsPowerUserPolicy424",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup424265176155" [
+              label = "\nAwsSupportUserGroup42",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy424265176155" [
+              label = "\nAwsSupportUserPolicy4",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup907555560021" [
+              label = "\nAdminGroup90755556002",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy907555560021" [
+              label = "\nAdminPolicy9075555600",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup907555560021" [
+              label = "\nDeveloperGroup9075555",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy907555560021" [
+              label = "\nDeveloperPolicy907555",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup907555560021" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy907555560021" [
+              label = "\nCloudFormationDevelop",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup907555560021" [
+              label = "\nReadOnlyGroup90755556",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy907555560021" [
+              label = "\nReadOnlyPolicy9075555",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup907555560021" [
+              label = "\nSecurityAuditGroup907",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy907555560021" [
+              label = "\nSecurityAuditPolicy90",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup907555560021" [
+              label = "\nOperationsGroup907555",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy907555560021" [
+              label = "\nOperationsPolicy90755",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup907555560021" [
+              label = "\nAwsPowerUserGroup9075",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy907555560021" [
+              label = "\nAwsPowerUserPolicy907",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup907555560021" [
+              label = "\nAwsSupportUserGroup90",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy907555560021" [
+              label = "\nAwsSupportUserPolicy9",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+          }
+          subgraph "cluster-SubGraph.guardduty-main" {
+            graph [
+              label = "guardduty-main",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyDetector" [
+              label = " GUARDDUTY DETECTOR\nGuardDutyDetector",
+              fontsize = 12,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyMember303182103652" [
+              label = " GUARDDUTY MEMBER",
+              fontsize = 12,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyMember424265176155" [
+              label = " GUARDDUTY MEMBER",
+              fontsize = 12,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyMember907555560021" [
+              label = " GUARDDUTY MEMBER",
+              fontsize = 12,
+            ];
+          }
+          subgraph "cluster-SubGraph.stackset-admin-role-template" {
+            graph [
+              label = "stackset-admin-role-template",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#aaaaaa",
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/StackSetAdminRole/stackset-admin-role-template/AWSCloudFormationStackSetAdministrationRole" [
+              label = " IAM Role",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/StackSetAdminRole/stackset-admin-role-template/AWSCloudFormationStackSetExecutionRole" [
+              label = " IAM Role",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+          }
+        }
+      }
+      subgraph "cluster-SubGraph.LZ-CORE-LOGARCHIVE" {
+        graph [
+          label = "LZ-CORE-LOGARCHIVE",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        subgraph "cluster-SubGraph.303182103652-stack" {
+          graph [
+            label = "303182103652-stack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/StacksetExecutionRole/stackset-execution-role-template/AWSCloudFormationStackSetExecutionRole" [
+            label = " IAM Role",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+            label = " ServiceRole",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role" [
+            label = " Role",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          subgraph "cluster-SubGraph.log-archive" {
+            graph [
+              label = "log-archive",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/logging-bucket" [
+              label = " logging-bucket",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/cloudtrail-bucket" [
+              label = " cloudtrail-bucket",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/flowlogs-bucket" [
+              label = " flowlogs-bucket",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/config-bucket" [
+              label = " config-bucket",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/ConfigConfigurationAggregator" [
+              label = " Config",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-Config_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/CloudTrailPartitioningLambdaExecutionRole" [
+              label = "\nCloudTrailPartitionin",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/CloudTrailPartitioningLambdaFunction" [
+              label = "\nCloudTrailPartitionin",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/FlogLogsPartitioningLambdaExecutionRole" [
+              label = "\nFlogLogsPartitioningL",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.682,
+            ];
+            "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/FlogLogsPartitioningLambdaFunction" [
+              label = "\nFlogLogsPartitioningL",
+              fontsize = 12,
+              image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            subgraph "cluster-SubGraph.athena-template" {
+              graph [
+                label = "athena-template",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/athena-template/AthenaQueryResults" [
+                label = " S3 Bucket\nAthenaQueryResults",
+                fontsize = 12,
+                image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.4819999999999998,
+              ];
+              "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/athena-template/AuditingGlueDatabase" [
+                label = " GLUE DATABASE\nAuditingGlueDatabase",
+                fontsize = 12,
+              ];
+            }
+            subgraph "cluster-SubGraph.table-template" {
+              graph [
+                label = "table-template",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/table-template/CloudTrailTable" [
+                label = " GLUE TABLE\nCloudTrailTable",
+                fontsize = 12,
+              ];
+              "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/table-template/FlowLogsTable" [
+                label = " GLUE TABLE\nFlowLogsTable",
+                fontsize = 12,
+              ];
+            }
+          }
+        }
+      }
+      subgraph "cluster-SubGraph.LZ-SERVICE-ACCOUNTS" {
+        graph [
+          label = "LZ-SERVICE-ACCOUNTS",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        subgraph "cluster-SubGraph.StackSet" {
+          graph [
+            label = "StackSet",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "acme-landingZone-Pipeline/LZ-SERVICE-ACCOUNTS/StackSet/assumable-role/assumable-role" [
+            label = " CloudFormation\nStackSet\nassumable-role",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.898,
+          ];
+          "acme-landingZone-Pipeline/LZ-SERVICE-ACCOUNTS/StackSet/stackset-config/config" [
+            label = " CloudFormation\nStackSet config",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "acme-landingZone-Pipeline/LZ-SERVICE-ACCOUNTS/StackSet/stackset-cloudtrail/cloudtrail" [
+            label = " CloudFormation\nStackSet cloudtrail",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "acme-landingZone-Pipeline/LZ-SERVICE-ACCOUNTS/StackSet/guardduty-member/guardduty-member" [
+            label = " CloudFormation\nStackSet\nguardduty-member",
+            fontsize = 12,
+            image = "/Users/younghonoh/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.898,
+          ];
+        }
+      }
+    }
+  }
+  "acme-landingZone-Pipeline/Pipeline/Pipeline" -> "acme-landingZone-Pipeline/Pipeline/CodeBuildActionRole" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Pipeline" -> "acme-landingZone-Pipeline/Pipeline/UpdatePipeline/SelfMutation" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Pipeline" -> "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset1" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Pipeline" -> "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset2" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/CodeBuildActionRole" -> "acme-landingZone-Pipeline/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/CodeBuildActionRole" -> "acme-landingZone-Pipeline/Pipeline/UpdatePipeline/SelfMutation" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/CodeBuildActionRole" -> "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset1" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/CodeBuildActionRole" -> "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset2" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Assets/FileRole" -> "acme-landingZone-Pipeline/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset1" -> "acme-landingZone-Pipeline/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset1" -> "acme-landingZone-Pipeline/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset2" -> "acme-landingZone-Pipeline/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/Assets/FileAsset2" -> "acme-landingZone-Pipeline/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Pipeline/UpdatePipeline/SelfMutation" -> "acme-landingZone-Pipeline/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/AdminPolicy" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/AdminGroup" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserMangementPolicy" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserMangementGroup" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserCredentialsManagementPolicy" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/iam-group/UserCredentialsManagement" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy293431643333" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup293431643333" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup303182103652" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup424265176155" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AdminGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/DeveloperGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/CloudFormationDeveloperGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/ReadOnlyGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/SecurityAuditGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/OperationsGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsPowerUserGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserPolicy907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/assume-role/AwsSupportUserGroup907555560021" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyMember303182103652" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyDetector" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyMember424265176155" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyDetector" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyMember907555560021" -> "acme-landingZone-Pipeline/LZ-CORE-MASTER/293431643333-Stack/guardduty-main/GuardDutyDetector" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/cloudtrail-bucket" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/logging-bucket" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/cloudtrail-bucket" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/CloudTrailPartitioningLambdaFunction" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/flowlogs-bucket" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/logging-bucket" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/flowlogs-bucket" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/FlogLogsPartitioningLambdaFunction" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/config-bucket" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/logging-bucket" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/table-template/CloudTrailTable" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/cloudtrail-bucket" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/table-template/FlowLogsTable" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/flowlogs-bucket" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/CloudTrailPartitioningLambdaFunction" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/CloudTrailPartitioningLambdaExecutionRole" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/FlogLogsPartitioningLambdaFunction" -> "acme-landingZone-Pipeline/LZ-CORE-LOGARCHIVE/303182103652-stack/log-archive/FlogLogsPartitioningLambdaExecutionRole" [
+    dir = "both",
+  ];
+  "acme-landingZone-Pipeline/Repository/acmelandingZonePipeline94868EA7-awstf-rnd-v2-EventRule" -> "acme-landingZone-Pipeline/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+}

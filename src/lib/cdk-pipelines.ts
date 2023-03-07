@@ -9,6 +9,7 @@ import { MasterAccountStage } from './master-account-stage';
 //import { ServiceAccountStage } from './service-account-stage';
 import { StacksetStage } from './stackset-stage';
 //import { DynamoDbCustomLoaderStack } from './infra/ddb-custom-loader-stack';
+import { ServiceAccountNetworkStage } from './cdk-pipeline-stages/service-account-network-stage';
 
 export interface CodepipelineSourceProps {
   gitType: string;
@@ -71,12 +72,23 @@ export class CdkPipelinesStack extends cdk.Stack {
       },
     })); */
 
+
     pipeline.addStage(new StacksetStage(this, 'LZ-SERVICE-ACCOUNTS', {
       env: {
         account: envVars.MASTER.ACCOUNT_ID,
         region: envVars.REGION,
       },
     }));
+
+    // TEST Code
+    for (let account of envVars.SERVICE_ACCOUNTS) {
+      pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
+        env: {
+          account: account.Id,
+          region: envVars.REGION,
+        },
+      }));
+    }
 
   }
 
