@@ -23,12 +23,20 @@ npx cdk bootstrap \
 aws://303182103652/ap-northeast-2
 
 # aws-tf-cdklz-svc
-# npx cdk bootstrap \
-# --profile aws-tf-cdklz-svc \
-# --trust 293431643333 \
-# --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
-# aws://424265176155/ap-northeast-2
+npx cdk bootstrap \
+--profile aws-tf-cdklz-svc \
+--trust 293431643333 \
+--trust-for-lookup 293431643333 \
+--cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
+aws://424265176155/ap-northeast-2
 
+# aws-tf-cdklz-svc2
+npx cdk bootstrap \
+--profile aws-tf-cdklz-svc2 \
+--trust 293431643333 \
+--trust-for-lookup 293431643333 \
+--cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
+aws://907555560021/ap-northeast-2
 
 aws s3 mb s3://cdklz-stackset-template-293431643333 \
     --profile aws-tf-cdklz \

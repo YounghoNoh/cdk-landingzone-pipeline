@@ -23,4 +23,6 @@ const project = new AwsCdkTypeScriptApp({
   // releaseWorkflow: undefined,        /* Define a GitHub workflow for releasing from "main" when new versions are bumped. */
 });
 // project.cdkConfig.plugin = ['cdk-assume-role-credential-plugin'];
+project.gitignore.addPatterns('diagram.png');
+project.gitignore.addPatterns('diagram.dot');
 project.synth();

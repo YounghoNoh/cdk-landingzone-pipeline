@@ -21,6 +21,8 @@
 build/Release
 cdk.out/
 coverage
+diagram.dot
+diagram.png
 jspm_packages/
 junit.xml
 lerna-debug.log*
@@ -51,4 +53,3 @@ yarn-error.log*
 !/tsconfig.eslint.json
 !/tsconfig.jest.json
 !/tsconfig.json
-diagram.png
