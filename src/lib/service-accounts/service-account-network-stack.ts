@@ -10,7 +10,7 @@ export class ServiceAccountNetworkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: ServiceAccountNetworkStackProps) {
     super(scope, id, props);
 
-    const vpc = new ec2.Vpc(this, `service-vpc-${props.env?.account}`)
+    new ec2.Vpc(this, `service-vpc-${props.env?.account}`)
 
   }
 }
