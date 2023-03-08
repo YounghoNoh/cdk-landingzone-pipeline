@@ -3,7 +3,7 @@ import { SecretValue } from 'aws-cdk-lib';
 import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
 import { Construct } from 'constructs';
-// import { ServiceAccountNetworkStage } from './cdk-pipeline-stages/service-account-network-stage';
+import { ServiceAccountNetworkStage } from './cdk-pipeline-stages/service-account-network-stage';
 import { envVars } from './config';
 import { LoggingAccountStage } from './logging-account-stage';
 import { MasterAccountStage } from './master-account-stage';
@@ -90,15 +90,15 @@ export class CdkPipelinesStack extends cdk.Stack {
     //   }));
     // }
 
-    // let svc2 = envVars.SERVICE_ACCOUNTS[3].Id;
+    let svc2 = envVars.SERVICE_ACCOUNTS[3].Id;
     // let svc2 = envVars.LOG_ARCHIVE.ACCOUNT_ID;
 
-    // pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${svc2}`, {
-    //   env: {
-    //     account: envVars.MASTER.ACCOUNT_ID,
-    //     region: envVars.REGION,
-    //   },
-    // }));
+    pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${svc2}`, {
+      env: {
+        account: envVars.MASTER.ACCOUNT_ID,
+        region: envVars.REGION,
+      },
+    }));
 
 
 
