@@ -95,7 +95,7 @@ export class CdkPipelinesStack extends cdk.Stack {
 
     pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${svc2}`, {
       env: {
-        account: svc2,
+        account: envVars.MASTER.ACCOUNT_ID,
         region: envVars.REGION,
       },
     }));

@@ -58,3 +58,5 @@ aws codecommit create-repository \
 
 
 AWS_SDK_LOAD_CONFIG=1 AWS_PROFILE=aws-tf-cdklz npx awscdk-v1-stack-finder
+
+assumed-role/acme-landingZone-Pipeline-PipelineBuildSynthCdkBui-734YV83E1RW1/AWSCodeBuild-e370d960-9ea1-4723-85be-65e890b066be
