@@ -91,14 +91,14 @@ export class CdkPipelinesStack extends cdk.Stack {
     // }
 
     // let svc2 = envVars.SERVICE_ACCOUNTS[3].Id;
-    let svc2 = envVars.LOG_ARCHIVE.ACCOUNT_ID;
+    // let svc2 = envVars.LOG_ARCHIVE.ACCOUNT_ID;
 
-    pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${svc2}`, {
-      env: {
-        account: svc2,
-        region: envVars.REGION,
-      },
-    }));
+    // pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${svc2}`, {
+    //   env: {
+    //     account: svc2,
+    //     region: envVars.REGION,
+    //   },
+    // }));
 
 
 
