@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
-import * as ec2 from 'aws-cdk-lib/aws-ec2';
+// import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { Construct } from 'constructs';
+import { ServiceAccountNetworkConstruct } from './service-account-network-construct';
 
 export interface ServiceAccountNetworkStackProps extends cdk.StackProps {
 
@@ -11,7 +12,9 @@ export class ServiceAccountNetworkStack extends cdk.Stack {
     super(scope, id, props);
 
     // new ec2.Vpc(this, `service-vpc-${props.env?.account}`);
-    new ec2.Vpc(this, 'service-vpc');
+    // new ec2.Vpc(this, 'service-vpc');
+
+    new ServiceAccountNetworkConstruct(this, 'service-vpc')
 
   }
 }
