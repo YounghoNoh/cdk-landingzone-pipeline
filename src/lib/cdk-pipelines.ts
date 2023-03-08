@@ -81,24 +81,30 @@ export class CdkPipelinesStack extends cdk.Stack {
     }));
 
     // TEST Code
-    // for (let account of envVars.SERVICE_ACCOUNTS) {
-    //   pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
-    //     env: {
-    //       account: account.Id,
-    //       region: envVars.REGION,
-    //     },
-    //   }));
-    // }
+    for (let account of envVars.SERVICE_ACCOUNTS) {
 
-    let svc2 = envVars.SERVICE_ACCOUNTS[3].Id;
+      if(account.Id != envVars.MASTER.ACCOUNT_ID && account.Id != envVars.LOG_ARCHIVE.ACCOUNT_ID){
+
+        pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
+          env: {
+            account: account.Id,
+            region: envVars.REGION,
+          },
+        }));
+
+      }
+      
+    }
+
+    // let svc2 = envVars.SERVICE_ACCOUNTS[3].Id;
     // let svc2 = envVars.LOG_ARCHIVE.ACCOUNT_ID;
 
-    pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-TEST`, {
-      env: {
-        account: svc2,
-        region: envVars.REGION,
-      },
-    }));
+    // pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-TEST`, {
+    //   env: {
+    //     account: svc2,
+    //     region: envVars.REGION,
+    //   },
+    // }));
 
 
 
