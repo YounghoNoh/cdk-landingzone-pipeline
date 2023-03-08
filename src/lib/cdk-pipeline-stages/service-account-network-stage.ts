@@ -1,7 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { ServiceAccountNetworkStack } from '../service-accounts/service-account-network-stack';
 import { envVars } from '../config';
+import { ServiceAccountNetworkStack } from '../service-accounts/service-account-network-stack';
 
 export interface ServiceAccountNetworkStageProps extends cdk.StageProps{
 
@@ -19,7 +19,7 @@ export class ServiceAccountNetworkStage extends cdk.Stage {
       env: devEnv,
     }); */
     // new ServiceAccountNetworkStack(this, 'Sub1', props);
-    new ServiceAccountNetworkStack(this, `${props.env?.account}-vpc`, {});
+    // new ServiceAccountNetworkStack(this, `${props.env?.account}-vpc`, {});
 
     /* new LoggingAccountStack(this, 'logging', {
       //synthesizer: new cdk.DefaultStackSynthesizer({ qualifier: 'jingo12345' }),
@@ -29,8 +29,8 @@ export class ServiceAccountNetworkStage extends cdk.Stage {
       new ServiceAccountNetworkStack(this, `${account.Name}-vpc`, {
         env: {
           account: account.Id,
-          region: envVars.REGION
-        }
+          region: envVars.REGION,
+        },
       });
     }
   }

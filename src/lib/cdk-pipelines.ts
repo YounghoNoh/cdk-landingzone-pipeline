@@ -101,7 +101,6 @@ export class CdkPipelinesStack extends cdk.Stack {
     }));
 
 
-
   }
 
   // private getCodepipelineSource( sourceProps: CodepipelineSourceProps) : CodePipelineSource | undefined {
