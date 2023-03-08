@@ -11,6 +11,7 @@
 # aws-tf-cdklz
 npx cdk bootstrap \
 --profile aws-tf-cdklz \
+--no-bootstrap-customer-key \
 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
 aws://293431643333/ap-northeast-2
 
@@ -19,6 +20,7 @@ npx cdk bootstrap \
 --profile aws-tf-cdklz-log \
 --trust 293431643333 \
 --trust-for-lookup 293431643333 \
+--no-bootstrap-customer-key \
 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
 aws://303182103652/ap-northeast-2
 
@@ -27,6 +29,7 @@ npx cdk bootstrap \
 --profile aws-tf-cdklz-svc \
 --trust 293431643333 \
 --trust-for-lookup 293431643333 \
+--no-bootstrap-customer-key \
 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
 aws://424265176155/ap-northeast-2
 
@@ -35,6 +38,7 @@ npx cdk bootstrap \
 --profile aws-tf-cdklz-svc2 \
 --trust 293431643333 \
 --trust-for-lookup 293431643333 \
+--no-bootstrap-customer-key \
 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
 aws://907555560021/ap-northeast-2
 
