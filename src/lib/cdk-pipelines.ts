@@ -4,7 +4,7 @@ import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
 import { Construct } from 'constructs';
 import { StacksetExecutionRoleStage } from './execution-role/stackset-execution-role-stage';
-// import { ServiceAccountNetworkStage } from './cdk-pipeline-stages/service-account-network-stage';
+// import { NetworkStage } from './network/network-stage';
 import { envVars } from './config';
 import { LoggingAccountStage } from './logging-account-stage';
 import { MasterAccountStage } from './master-account-stage';
@@ -50,18 +50,6 @@ export class CdkPipelinesStack extends cdk.Stack {
       }
     }))
 
-    // for (let account of envVars.SERVICE_ACCOUNTS) {
-    //   if(account.Id != envVars.MASTER.ACCOUNT_ID && account.Id != envVars.LOG_ARCHIVE.ACCOUNT_ID){
-    //     pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
-    //       env: {
-    //         account: account.Id,
-    //         region: envVars.REGION,
-    //       },
-    //     }));
-    //   }
-    // }
-
-
     // ToDo: Add ApplicationStage
     //pipeline.addStage(new MyStack(this, 'Dev'));
     pipeline.addStage(new MasterAccountStage(this, 'LZ-CORE-MASTER', {
@@ -78,21 +66,6 @@ export class CdkPipelinesStack extends cdk.Stack {
       },
     }));
 
-    /* pipeline.addStage(new ServiceAccountStage(this, 'LZ-SVC', {
-      env: {
-        account: '037729278610',
-        region: 'ap-northeast-2',
-      },
-    }));
-
-    pipeline.addStage(new ServiceAccountStage(this, 'LZ-SUB2', {
-      env: {
-        account: '856556794427',
-        region: 'ap-northeast-2',
-      },
-    })); */
-
-
     pipeline.addStage(new StacksetStage(this, 'LZ-SERVICE-ACCOUNTS', {
       env: {
         account: envVars.MASTER.ACCOUNT_ID,
@@ -103,7 +76,7 @@ export class CdkPipelinesStack extends cdk.Stack {
     // TEST Code
     // for (let account of envVars.SERVICE_ACCOUNTS) {
     //   if(account.Id != envVars.MASTER.ACCOUNT_ID && account.Id != envVars.LOG_ARCHIVE.ACCOUNT_ID){
-    //     pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
+    //     pipeline.addStage(new NetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
     //       env: {
     //         account: account.Id,
     //         region: envVars.REGION,
@@ -111,11 +84,9 @@ export class CdkPipelinesStack extends cdk.Stack {
     //     }));
     //   }
     // }
-
     // let svc2 = envVars.SERVICE_ACCOUNTS[3].Id;
     // let svc2 = envVars.LOG_ARCHIVE.ACCOUNT_ID;
-
-    // pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-TEST`, {
+    // pipeline.addStage(new NetworkStage(this, `LZ-SERVICE-ACCOUNTS-TEST`, {
     //   env: {
     //     account: svc2,
     //     region: envVars.REGION,
