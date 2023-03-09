@@ -3,16 +3,19 @@ import * as cfn_inc from 'aws-cdk-lib/cloudformation-include';
 import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import { envVars } from '../config';
+import { env } from 'process';
 
 export interface StacksetExecutionRoleConstructProps {
-  stacksetRole: string;
+  // stacksetRole: string;
 }
 
 export class StacksetExecutionRoleConstruct extends Construct {
-  constructor(scope: Construct, id: string, props: StacksetExecutionRoleConstructProps) {
+  // constructor(scope: Construct, id: string, props: StacksetExecutionRoleConstructProps) {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
-    if ( props.stacksetRole == 'admin' ) {
+    // if ( props.stacksetRole == 'admin' ) {
+    if ( env.account == envVars.MASTER.ACCOUNT_ID ) {
       new cfn_inc.CfnInclude(this, 'stackset-admin-role-template', {
         templateFile: path.join(__dirname, '../..', 'cfn-template/stack-set/00.stackset-execution-role/stackset-admin-role.template.yaml'),
       });
