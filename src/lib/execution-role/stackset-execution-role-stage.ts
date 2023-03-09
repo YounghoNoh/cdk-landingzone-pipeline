@@ -1,7 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { envVars } from '../config';
-import { StacksetExecutionRoleStack } from '../service-accounts/stackset-execution-role-stack';
+import { StacksetExecutionRoleStack } from './stackset-execution-role-stack';
 
 export interface StacksetExecutionRoleProps extends cdk.StageProps{
 
