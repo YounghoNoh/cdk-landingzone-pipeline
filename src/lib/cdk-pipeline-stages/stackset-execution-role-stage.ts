@@ -29,7 +29,7 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
           },
           stacksetRole: 'sub'
         });
-        masterStack.addDependency(subStack);
+        subStack.addDependency(masterStack);
       }
 
     }
