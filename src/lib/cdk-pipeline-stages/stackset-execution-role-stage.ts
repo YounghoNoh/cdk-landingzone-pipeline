@@ -27,7 +27,7 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
             account: account.Id,
             region: envVars.REGION
           },
-          stacksetRole: 'admin'
+          stacksetRole: 'sub'
         });
         masterStack.addDependency(subStack);
       }
