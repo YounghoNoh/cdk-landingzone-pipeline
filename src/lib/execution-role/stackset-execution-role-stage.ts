@@ -11,6 +11,7 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
   constructor(scope: Construct, id: string, props: StacksetExecutionRoleProps) {
     super(scope, id, props);
 
+    // master stack
     const masterStack = new StacksetExecutionRoleStack(this, `Master-StackSetRole`, {
       env: {
         account: envVars.MASTER.ACCOUNT_ID,
@@ -21,15 +22,14 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
 
     for (let account of envVars.SERVICE_ACCOUNTS) {
       if(account.Id != envVars.MASTER.ACCOUNT_ID){
-        // stack
-        const subStack = new StacksetExecutionRoleStack(this, `${account.Name}-StackSetRole`, {
+        // sub stack
+        new StacksetExecutionRoleStack(this, `${account.Name}-StackSetRole`, {
           env: {
             account: account.Id,
             region: envVars.REGION
           },
           stacksetRole: 'sub'
-        });
-        subStack.addDependency(masterStack);
+        }).addDependency(masterStack);
       }
 
     }
