@@ -27,7 +27,6 @@ export class CdkPipelinesStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: CdkPipelinesProps) {
     super(scope, id, props);
 
-
     const pipeline = new CodePipeline(this, 'Pipeline', {
       selfMutation: true,
       pipelineName: `${envVars.COMPANY_NAME}-${envVars.PROJECT_NAME}-pipeline`,
