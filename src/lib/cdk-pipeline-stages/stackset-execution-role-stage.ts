@@ -19,7 +19,7 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
       }
 
       // stack
-      new StacksetExecutionRoleStack(this, `${account.Name}-StackSetRole`, {
+      new StacksetExecutionRoleStack(this, `${account.Name}-StackSetRole-${stacksetRole}`, {
         env: {
           account: account.Id,
           region: envVars.REGION
