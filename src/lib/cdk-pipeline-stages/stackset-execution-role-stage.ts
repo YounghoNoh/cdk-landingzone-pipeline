@@ -15,7 +15,8 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
       env: {
         account: envVars.MASTER.ACCOUNT_ID,
         region: envVars.REGION
-      }
+      },
+      stacksetRole: 'admin'
     });
 
     for (let account of envVars.SERVICE_ACCOUNTS) {
@@ -25,7 +26,8 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
           env: {
             account: account.Id,
             region: envVars.REGION
-          }
+          },
+          stacksetRole: 'sub'
         });
       }
 
