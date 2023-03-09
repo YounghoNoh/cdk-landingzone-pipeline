@@ -11,20 +11,24 @@ export class StacksetExecutionRoleStage extends cdk.Stage {
   constructor(scope: Construct, id: string, props: StacksetExecutionRoleProps) {
     super(scope, id, props);
 
-    // let stacksetRole = 'sub';
+    new StacksetExecutionRoleStack(this, `Master-StackSetRole`, {
+      env: {
+        account: envVars.MASTER.ACCOUNT_ID,
+        region: envVars.REGION
+      }
+    });
 
     for (let account of envVars.SERVICE_ACCOUNTS) {
-      // if(account.Id == envVars.MASTER.ACCOUNT_ID){
-      //   stacksetRole = 'admin';
-      // }
+      if(account.Id != envVars.MASTER.ACCOUNT_ID){
+        // stack
+        new StacksetExecutionRoleStack(this, `${account.Name}-StackSetRole`, {
+          env: {
+            account: account.Id,
+            region: envVars.REGION
+          }
+        });
+      }
 
-      // stack
-      new StacksetExecutionRoleStack(this, `${account.Name}-StackSetRole`, {
-        env: {
-          account: account.Id,
-          region: envVars.REGION
-        }
-      });
 
     }
 
