@@ -3,6 +3,7 @@ import { SecretValue } from 'aws-cdk-lib';
 import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
 import { Construct } from 'constructs';
+import { StacksetExecutionRoleStage } from './cdk-pipeline-stages/stackset-execution-role-stage';
 // import { ServiceAccountNetworkStage } from './cdk-pipeline-stages/service-account-network-stage';
 import { envVars } from './config';
 import { LoggingAccountStage } from './logging-account-stage';
@@ -40,6 +41,25 @@ export class CdkPipelinesStack extends cdk.Stack {
         ],
       }),
     });
+
+    // TEST Code
+    pipeline.addStage(new StacksetExecutionRoleStage(this, 'LZ-STACKSET-EXECUTION-ROLE', {
+      env: {
+        account: envVars.MASTER.ACCOUNT_ID,
+        region: envVars.REGION
+      }
+    }))
+
+    // for (let account of envVars.SERVICE_ACCOUNTS) {
+    //   if(account.Id != envVars.MASTER.ACCOUNT_ID && account.Id != envVars.LOG_ARCHIVE.ACCOUNT_ID){
+    //     pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
+    //       env: {
+    //         account: account.Id,
+    //         region: envVars.REGION,
+    //       },
+    //     }));
+    //   }
+    // }
 
 
     // ToDo: Add ApplicationStage
@@ -82,7 +102,6 @@ export class CdkPipelinesStack extends cdk.Stack {
 
     // TEST Code
     // for (let account of envVars.SERVICE_ACCOUNTS) {
-
     //   if(account.Id != envVars.MASTER.ACCOUNT_ID && account.Id != envVars.LOG_ARCHIVE.ACCOUNT_ID){
     //     pipeline.addStage(new ServiceAccountNetworkStage(this, `LZ-SERVICE-ACCOUNTS-${account.Id}`, {
     //       env: {
