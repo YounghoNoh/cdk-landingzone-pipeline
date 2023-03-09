@@ -28,7 +28,7 @@ export class GuardDutyMainConstruct extends Construct {
         message: 'You are invited to enable Amazon Guardduty',
         status: 'Invited',
       });
-      cfnMember.addDependsOn(cfnDetector);
+      cfnMember.addDependency(cfnDetector);
     });
   }
 }

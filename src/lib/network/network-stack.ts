@@ -10,7 +10,7 @@ export class NetworkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: NetworkStackProps) {
     super(scope, id, props);
 
-    new NetworkConstruct(this, 'service-vpc')
+    new NetworkConstruct(this, 'service-vpc');
 
   }
 }

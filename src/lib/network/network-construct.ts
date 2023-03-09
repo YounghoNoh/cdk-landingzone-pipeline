@@ -12,7 +12,7 @@ export class NetworkConstruct extends Construct {
 
     new ec2.Vpc(this, 'service-vpc', {
       ipAddresses: IpAddresses.cidr('10.1.0.0/16'),
-      maxAzs: 2
+      maxAzs: 2,
     });
 
   }

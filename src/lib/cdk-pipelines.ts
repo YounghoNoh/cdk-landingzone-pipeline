@@ -3,9 +3,9 @@ import { SecretValue } from 'aws-cdk-lib';
 import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
 import { Construct } from 'constructs';
+import { envVars } from './config';
 import { StacksetExecutionRoleStage } from './execution-role/stackset-execution-role-stage';
 // import { NetworkStage } from './network/network-stage';
-import { envVars } from './config';
 import { LoggingAccountStage } from './logging-account-stage';
 import { MasterAccountStage } from './master-account-stage';
 //import { ServiceAccountStage } from './service-account-stage';
@@ -45,9 +45,9 @@ export class CdkPipelinesStack extends cdk.Stack {
     pipeline.addStage(new StacksetExecutionRoleStage(this, 'LZ-STACKSET-EXECUTION-ROLE', {
       env: {
         account: envVars.MASTER.ACCOUNT_ID,
-        region: envVars.REGION
-      }
-    }))
+        region: envVars.REGION,
+      },
+    }));
 
     // ToDo: Add ApplicationStage
     //pipeline.addStage(new MyStack(this, 'Dev'));

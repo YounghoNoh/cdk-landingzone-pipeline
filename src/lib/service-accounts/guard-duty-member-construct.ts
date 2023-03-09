@@ -21,6 +21,6 @@ export class GuardDutyMember extends Construct {
       //invitationId: 'invitationId',
     });
 
-    cfnMaster.addDependsOn(cfnDetector);
+    cfnMaster.addDependency(cfnDetector);
   }
 }

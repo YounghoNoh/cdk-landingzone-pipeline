@@ -10,7 +10,7 @@ export class NetworkStage extends cdk.Stage {
   constructor(scope: Construct, id: string, props: NetworkStageProps) {
     super(scope, id, props);
 
-    new NetworkStack(this, 'service-account-vpc', {})
+    new NetworkStack(this, 'service-account-vpc', {});
 
   }
 }
